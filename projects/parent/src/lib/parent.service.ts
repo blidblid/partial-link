@@ -4,8 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ParentService {
-
   constructor() { 
-    console.log('parenttt')
+    console.log('hello from parent')
   }
 }

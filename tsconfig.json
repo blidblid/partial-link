@@ -4,9 +4,6 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "grand-child": [
-        "projects/grand-child/src"
-      ],
       "parent": [
         "projects/parent/src"
       ]

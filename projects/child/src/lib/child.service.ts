@@ -6,6 +6,6 @@ import { ParentService } from 'parent';
 })
 export class ChildService {
   constructor(private parent: ParentService) { 
-    console.log('child');
+    console.log('hello from child');
   }
 }

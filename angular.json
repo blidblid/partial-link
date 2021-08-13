@@ -102,7 +102,6 @@
             "main": "projects/app/src/main.ts",
             "polyfills": "projects/app/src/polyfills.ts",
             "tsConfig": "projects/app/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/app/src/favicon.ico",
               "projects/app/src/assets"
@@ -110,7 +109,13 @@
             "styles": [
               "projects/app/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -140,7 +145,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -199,46 +205,6 @@
             "production": {
               "devServerTarget": "app:serve:production"
             }
-          }
-        }
-      }
-    },
-    "grand-child": {
-      "projectType": "library",
-      "root": "projects/grand-child",
-      "sourceRoot": "projects/grand-child/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "projects/grand-child/tsconfig.lib.json",
-            "project": "projects/grand-child/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/grand-child/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/grand-child/src/test.ts",
-            "tsConfig": "projects/grand-child/tsconfig.spec.json",
-            "karmaConfig": "projects/grand-child/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/grand-child/tsconfig.lib.json",
-              "projects/grand-child/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
