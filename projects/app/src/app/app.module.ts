@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { GrandChildModule } from 'grand-child';
-import { ChildModule } from 'projects/child/src';
-import { ParentModule } from 'projects/parent/src/public-api';
+import { ChildModule } from 'child';
+import { ParentModule } from 'parent';
 
 import { AppComponent } from './app.component';
 
